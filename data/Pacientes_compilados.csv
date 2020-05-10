@@ -1,0 +1,25 @@
+N paciente;Data de inicio de sintomas;Data de confirmacao; Idade; Sexo; Bairro;Cidade;Viagem; Comorbidades;Internacao; Morte;Trabalha em Hospital
+1;13-mar;;47;;Ipanema;RJ;;N;S;;N
+2;17-mar;19-mar;39;F;Jardim Brasília;Resende;N;N;N;;N
+3;18-mar;;38;F;Jardim Jalisco;Resende;;N;N;;N
+4;20-mar;;59;M;Retiro da Matiqueira;Cruzeiro;;N;S;;N
+5;15-mar;18-mar;38;F;Jardim Jalisco;Resende;N;;;;
+6;22-mar;26-mar;47;M;Morada da Colina;Resende;N;N;S;;N
+7;24-mar;30-mar;39;M;Vila Julieta;Resende;N;N;S;20-abr;N
+8;29-mar;30-mar;34;;Santa Barbara;Quatis;;S;S;;
+9;30-mar;30-mar;19;M;Morada do Contorno;Resende;N;N;S;;N
+10;30-mar;7-abr;45;F;Centro;Quatis;N;S;N;;N
+11;31-mar;;57;M;Liberdade;Resende;N;N;S;;N
+12;6-abr;;32;;Vila Odete;Itatiaia;N;N;N;;S
+13;4-abr;13-abr;91;M;Vila Isabel;Resende;N;S;S;13-abr;N
+14;31-mar;;57;M;Liberdade;Resende;N;;;;
+15;-;12-abr;36;M;Centro;Quatis;;N;N;;N
+16;10-abr;13-abr;28;M;Morada do Castelo;Resende;N;N;N;;S
+17;14-abr;;44;;Jardim Jalisco;Resende;;;;;S
+18;15-abr;;46;;Campos Elíseos;Resende;;;;;S
+19;11-abr;14-abr;85;M;Liberdade;Resende;N;N;S;;
+20;8-abr;;29;F;Novo Surubi;Resende;N;N;N;;S
+21;14-abr;14-abr;86;F;Jardim Primavera;Resende;N;S;S;18-abr;
+22;14-abr;16-abr;44;F;Jardim Brasília;Resende;N;;;;
+23;15-abr;16-abr;46;F;Campos Elíseos;Resende;N;;;;
+24;8-abr;18-abr;29;F;Novo Surubi;Resende;N;;;;
