@@ -1,6 +1,6 @@
 # python_online_2020
 <br>
-Curso Pratico de Python Usando Tkinter
+Curso Pratico de Python
 <br>
 **Em Preparação**
 <br>
