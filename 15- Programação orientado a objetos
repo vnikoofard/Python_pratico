@@ -573,9 +573,12 @@
     "\n",
     "        super().__init__(nome, sexo)\n",
     "        import numpy as np\n",
+    "        \n",
+    "        self.ano = ano\n",
+    "\n",
     "        # foi adicionado o atributo 'feliz' aqui por um proposito que será esclarecido embaixo\n",
     "        self.feliz = np.random.choice(['Não está', 'está'], p = [0.8, 0.2])\n",
-    "        self.ano = ano\n",
+    "        \n",
     "        if curso.lower() in ['mecanica', 'produção', 'quimica']:\n",
     "                self.curso = curso\n",
     "        else:\n",
@@ -642,6 +645,110 @@
    ],
    "source": [
     "renan.sexo"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Podemos usar um instante de uma classe como atribute de outra classe. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 171,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class Moradia:\n",
+    "    \"\"\" A moradia dos estudantes\"\"\"\n",
+    "\n",
+    "    def __init__(self, tipo=\"republica\"):\n",
+    "        self.tipo = tipo\n",
+    "\n",
+    "    def descrever(self):\n",
+    "        print(f\"o tipo de moradia do aluno é {self.tipo}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 172,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class uerjiano(humano):\n",
+    "    \"\"\"Definir um etudante da UERJ que é um ser humano (a principio!!!)\"\"\"\n",
+    "\n",
+    "    def __init__(self, nome, sexo, curso, ano):\n",
+    "\n",
+    "        super().__init__(nome, sexo)\n",
+    "        import numpy as np\n",
+    "        \n",
+    "        self.ano = ano\n",
+    "        self.moradia = Moradia()\n",
+    "\n",
+    "        # foi adicionado o atributo 'feliz' aqui por um proposito que será esclarecido embaixo\n",
+    "        self.feliz = np.random.choice(['Não está', 'está'], p = [0.8, 0.2])\n",
+    "        \n",
+    "        if curso.lower() in ['mecanica', 'produção', 'quimica']:\n",
+    "                self.curso = curso\n",
+    "        else:\n",
+    "            raise ValueError(f\"Nã tem o curso {curso} na FAT\")\n",
+    "\n",
+    "    def periodo(self):\n",
+    "        from datetime import datetime\n",
+    "\n",
+    "        self.periodo = datetime.now().year - int(self.ano)\n",
+    "        print(f\" {self.nome} está no periodo {2 * self.periodo}\")\n",
+    "        \n",
+    "    def isfeliz(self):\n",
+    "        import numpy as np\n",
+    "        # as probabilidades são diferentes da classe mãe!\n",
+    "        self.feliz = np.random.choice(['Não está', 'está'], p = [0.8, 0.2])\n",
+    "        #print(f\"{self.nome} {self.feliz} feliz\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 173,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "pedro = uerjiano(nome=\"Pedro\", sexo = \"Homem\", curso = \"Mecanica\", ano = 2016)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 174,
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": "o tipo de moradia do aluno é republica\n"
+    }
+   ],
+   "source": [
+    "pedro.moradia.descrever()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 177,
+   "metadata": {
+    "tags": []
+   },
+   "outputs": [
+    {
+     "output_type": "stream",
+     "name": "stdout",
+     "text": "Pedro está no periodo 8\n"
+    }
+   ],
+   "source": [
+    "pedro.periodo()"
    ]
   },
   {
