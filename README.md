@@ -1,6 +1,6 @@
-# python_online_2020
+# Python Pratico
 <br>
-Curso Pratico de Python
+Um Curso Pratico de Python
 <br>
 **Ainda em Preparação**
 <br>
